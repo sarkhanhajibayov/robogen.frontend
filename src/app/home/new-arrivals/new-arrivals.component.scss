@@ -21,6 +21,7 @@
     box-sizing: border-box;
     margin: 12px 12px 38px;
     padding:13px 13px 15px;
+
     &__wrapper{
         position: relative;
         height: 195px;
@@ -37,10 +38,20 @@
             z-index: 99;
             border-radius: 9px 9px 0 0
         }
+        
         &:hover &__img__hover{
             display: inline;
         }
-        
+    }
+    &__main{
+        width: calc(50% - 24px);
+        &__wrapper{
+            height: 330px;
+            &__img{
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
     &__content{
         &__info{

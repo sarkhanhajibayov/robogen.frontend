@@ -1,15 +1,21 @@
 <div class="container px-5">
-  
-    <ngx-slick-carousel
-      class="carousel h-100"
-      #slickModal="slick-carousel"
-      [config]="slideConfig"
-    >
-      @for (slide of slides; track slide.img) {
-      <div ngxSlickItem class="slider__theme">
-        <img class="slider__theme__image" src="{{ slide.img }}" alt="" width="100%" />
-      </div>
-      }
-    </ngx-slick-carousel>
+  <div class="header">
+    <h1 class="header__title text-center">LEGO themes</h1>
   </div>
-  
+  <ngx-slick-carousel
+    class="carousel h-100"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    @for (slide of slides; track slide.img) {
+    <div ngxSlickItem class="slider__theme">
+      <img
+        class="slider__theme__image"
+        src="{{ slide.img }}"
+        alt=""
+        width="100%"
+      />
+    </div>
+    }
+  </ngx-slick-carousel>
+</div>

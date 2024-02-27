@@ -1,0 +1,11 @@
+.container{
+    padding-bottom: 50px;
+}
+.advantage{
+    &__title{
+        text-transform: uppercase;
+        color: #222222;
+        font-family: "Jost";
+        font-weight: bold;
+    }
+}
