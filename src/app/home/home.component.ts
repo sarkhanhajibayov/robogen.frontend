@@ -1,14 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from './fixed-part/header/header.component';
 import { HeaderMenuComponent } from './fixed-part/header-menu/header-menu.component';
-import { SliderComponent } from './slider/slider.component';
-import { SearchComponent } from './search/search.component';
-import { ThemeComponent } from './theme/theme.component';
-import { BestForTodayComponent } from './best-for-today/best-for-today.component';
-import { AdvantageComponent } from './advantage/advantage.component';
-import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
 import { FooterComponent } from './fixed-part/footer/footer.component';
+import { SubscribeComponent } from './fixed-part/subscribe/subscribe.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -17,15 +13,13 @@ import { FooterComponent } from './fixed-part/footer/footer.component';
     HeaderComponent,
     FooterComponent,
     HeaderMenuComponent,
-    SliderComponent,
-    SearchComponent,
-    ThemeComponent,
-    BestForTodayComponent,
-    AdvantageComponent,
-    NewArrivalsComponent,
-    SubscribeComponent
+    SubscribeComponent,
+    RouterModule,
+    CommonModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+
+}
