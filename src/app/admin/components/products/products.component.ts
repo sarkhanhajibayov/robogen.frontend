@@ -3,7 +3,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { CommonService } from '../../../services/common.service';
-import { MatSelectModule } from '@angular/material/select';
+import { MatError, MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { BreadcrumbComponent } from '../../fixed-part/breadcrumb/breadcrumb.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -11,6 +11,7 @@ import { NewProductComponent } from '../../dialogs/new-product/new-product.compo
 import { Router } from '@angular/router';
 import { AlertifyService, MessageTypes } from '../../../services/alertify.service';
 import { MatSpinner } from '@angular/material/progress-spinner';
+import { ProductFilter } from '../../../models/products/product-filter';
 
 @Component({
   selector: 'app-all-products',
@@ -23,6 +24,7 @@ export class ProductsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'description',"serieName","themeName","age","gender","boxHeight","boxWidth","boxDiameter","price","inStock","operation"];
   dataSource:any;
   series:any
+  name!:string
   serieId!:number
   themes:any
   themeId!:number
@@ -71,6 +73,15 @@ export class ProductsComponent implements OnInit {
 
   getProducts(){
     this.showSpinner = true;
+    let filterModel = new ProductFilter(
+      this.name,
+      this.serieId,
+      this.themeId,
+      this.genderId,
+      this.ageGroupId,
+      this.currentPage + 1,
+      this.pageSize
+    );
     this.commonService.getProducts().subscribe(res => {this.dataSource = res,this.showSpinner = false;
     }
     )

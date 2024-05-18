@@ -24,12 +24,12 @@ export class SeriesComponent implements OnInit {
   constructor(private commonService:CommonService,public alertifyService:AlertifyService,
   ){}
   ngOnInit(): void {
-    // this.getSeries();
+    this.getSeries();
     // this.alertifyService.message("Hi",MessageTypes.Error)
   }
 
   getSeries(){
     this.showSpinner = true
-    this.commonService.getSeries().subscribe(res=>{this.dataSource=res,this,this.showSpinner=false})
+    this.commonService.getSeries().subscribe(res=>{this.dataSource=res,this.showSpinner=false})
   }
 }

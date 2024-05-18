@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatError, MatFormFieldModule } from '@angular/material/form-field';
 import { CommonService } from '../../../services/common.service';
 import { MatSelectModule } from '@angular/material/select';
-import { ProductDto } from '../../../models/product-dto';
+import { ProductDto } from '../../../models/products/product-dto';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { AlertifyService, MessageTypes } from '../../../services/alertify.service';
 
 @Component({
   selector: 'app-new-product',
   standalone: true,
-  imports: [MatFormFieldModule,ReactiveFormsModule,MatSelectModule,FormsModule,MatDialogModule     
+  imports: [MatFormFieldModule,ReactiveFormsModule,MatSelectModule,FormsModule,MatDialogModule,MatError   
   ],
   templateUrl: './new-product.component.html',
   styleUrl: './new-product.component.scss'

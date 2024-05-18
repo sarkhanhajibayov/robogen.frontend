@@ -1,4 +1,3 @@
-
 <div class="bk-form filter-form">
   <div class="dialog-header">
     <img
@@ -22,6 +21,9 @@
               placeholder="Name"
               type="text"
             />
+            @if(!form.controls['name'].valid && form.controls['name'].touched){
+              <mat-error class="text-danger">Name is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -33,18 +35,23 @@
               placeholder="Description"
               type="text"
             />
+            @if(!form.controls['description'].valid && form.controls['description'].touched){
+              <mat-error class="text-danger">Description is required</mat-error>
+            }
           </div>
         </div>
-
         <div class="col-12 p-0">
           <div class="form-group">
             <label>Serie:<sup class="text-danger star">*</sup></label>
             <mat-select formControlName="serieId" placeholder="Select" required>
               <mat-option>--</mat-option>
-              @for( s of series; track s){
-              <mat-option value="{{ s.id }}">{{ s.name }}</mat-option>
+              @for(s of series; track s){
+              <mat-option [value]="s.id">{{ s.name }}</mat-option>
               }
             </mat-select>
+            @if(!form.controls['serieId'].valid && form.controls['serieId'].touched){
+              <mat-error class="text-danger">Serie is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -52,40 +59,41 @@
             <label>Theme:<sup class="text-danger star">*</sup></label>
             <mat-select formControlName="themeId" placeholder="Select" required>
               <mat-option>--</mat-option>
-              @for( t of themes; track t){
-              <mat-option value="{{ t.id }}">{{ t.name }}</mat-option>
+              @for(t of themes; track t){
+              <mat-option [value]="t.id">{{ t.name }}</mat-option>
               }
             </mat-select>
+            @if(!form.controls['themeId'].valid && form.controls['themeId'].touched){
+              <mat-error class="text-danger">Theme is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
           <div class="form-group">
             <label>Gender:<sup class="text-danger star">*</sup></label>
-            <mat-select
-              formControlName="genderId"
-              placeholder="Select"
-              required
-            >
+            <mat-select formControlName="genderId" placeholder="Select" required>
               <mat-option>--</mat-option>
-              @for( g of genders; track g){
-              <mat-option value="{{ g.id }}">{{ g.name }}</mat-option>
+              @for(g of genders; track g){
+              <mat-option [value]="g.id">{{ g.name }}</mat-option>
               }
             </mat-select>
+            @if(!form.controls['genderId'].valid && form.controls['genderId'].touched){
+              <mat-error class="text-danger">Gender is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
           <div class="form-group">
             <label>Age group:<sup class="text-danger star">*</sup></label>
-            <mat-select
-              formControlName="ageGroupId"
-              placeholder="Select"
-              required
-            >
+            <mat-select formControlName="ageGroupId" placeholder="Select" required>
               <mat-option>--</mat-option>
-              @for( a of ageGroups; track a){
-              <mat-option value="{{ a.id }}">{{ a.name }}</mat-option>
+              @for(a of ageGroups; track a){
+              <mat-option [value]="a.id">{{ a.name }}</mat-option>
               }
             </mat-select>
+            @if(!form.controls['ageGroupId'].valid && form.controls['ageGroupId'].touched){
+              <mat-error class="text-danger">Age group is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -97,6 +105,9 @@
               placeholder="Box height"
               type="number"
             />
+            @if(!form.controls['boxHeight'].valid && form.controls['boxHeight'].touched){
+              <mat-error class="text-danger">Box height is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -108,6 +119,9 @@
               placeholder="Box width"
               type="number"
             />
+            @if(!form.controls['boxWidth'].valid && form.controls['boxWidth'].touched){
+              <mat-error class="text-danger">Box width is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -119,6 +133,9 @@
               placeholder="Box diameter"
               type="number"
             />
+            @if(!form.controls['boxDiameter'].valid && form.controls['boxDiameter'].touched){
+              <mat-error class="text-danger">Box diameter is required</mat-error>
+            }
           </div>
         </div>
         <div class="col-12 p-0">
@@ -130,6 +147,9 @@
               placeholder="Price"
               type="number"
             />
+            @if(!form.controls['price'].valid && form.controls['price'].touched){
+              <mat-error class="text-danger">Price is required</mat-error>
+            }
           </div>
           <div class="col-12 p-0">
             <div class="form-group">
@@ -140,6 +160,9 @@
                 placeholder="Image name"
                 type="text"
               />
+              @if(!form.controls['imageName'].valid && form.controls['imageName'].touched){
+                <mat-error class="text-danger">Image name is required</mat-error>
+              }
             </div>
           </div>
         </div>
