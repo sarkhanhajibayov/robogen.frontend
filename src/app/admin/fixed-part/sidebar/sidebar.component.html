@@ -1,0 +1,96 @@
+<mat-list class="list" role="list">
+  <div class="sidenav-logo">
+    <a class="navbar-brand d-flex align-items-center justify-content-center navbar__logo" href="#">
+      <img
+        src="assets/images/icons/logo.png"
+        alt="Logo"
+        width="35"
+        height="35"
+        class="d-inline-block align-text-top me-2"
+      />
+      robogen</a
+    >  </div>
+  <mat-list-item role="listitem">
+    <a
+      class="list__item d-flex justify-content-left align-items-center"
+      routerLink="products"
+      routerLinkActive="active-link"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-shop"></i>
+      </div>
+      <span>Products</span>
+    </a></mat-list-item
+  >
+  <mat-list-item role="listitem">
+    <a
+      class="list__item d-flex justify-content-left align-items-center"
+      routerLink="themes"
+      routerLinkActive="active-link"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-image"></i>
+      </div>
+      <span>Themes</span>
+    </a></mat-list-item
+  >
+  <mat-list-item role="listitem">
+    <a
+      class="list__item d-flex justify-content-left align-items-center"
+      routerLink="series"
+      routerLinkActive="active-link"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <span>Series</span>
+    </a></mat-list-item
+  >
+  <mat-list-item [disabled]="true" role="listitem">
+    <a
+      class="list__item list__disabled__item d-flex justify-content-left align-items-center"
+    >
+      <div class="list__icon ">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <span>Orders</span>
+    </a></mat-list-item
+  >
+  <mat-list-item [disabled]="true" role="listitem">
+    <a
+      class="list__item list__disabled__item d-flex justify-content-left align-items-center"
+      routerLink="users"
+      routerLinkActive="active-link"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span>Users</span>
+    </a></mat-list-item
+  >
+  <mat-list-item [disabled]="true" role="listitem">
+    <a
+      class="list__item list__disabled__item d-flex justify-content-left align-items-center"
+      routerLink="dashboard"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-house"></i>
+      </div>
+      <span>Dashboard</span>
+    </a>
+  </mat-list-item>
+  <mat-list-item role="listitem">
+    <a
+      class="list__item d-flex justify-content-left align-items-center"
+      routerLink="/login"
+      routerLinkActive="active-link"
+    >
+      <div class="list__icon">
+        <i class="fa-solid fa-door-open"></i>
+      </div>
+      <span>Exit</span>
+    </a></mat-list-item
+  >
+</mat-list>

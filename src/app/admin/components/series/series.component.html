@@ -1,0 +1,96 @@
+@if(showSpinner){
+<mat-spinner class="m-3" [diameter]="70" class="spinner"> </mat-spinner>
+} @if(!showSpinner){
+<div class="card-bg">
+  <div class="bk-form filter-form">
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="d-flex justify-content-end">
+              <div class="form-group">
+                <button class="main-button-short">
+                  <img src="assets/images/icons/filter.svg" alt="" /> Filter
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cus-card mb-0 pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="table-title">
+          <h3>Series</h3>
+          <div class="options">
+            <button class="main-button-short"><span>+</span>Add</button>
+          </div>
+        </div>
+        <div class="table-content">
+          <table mat-table [dataSource]="dataSource" class="">
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef>
+                <span class="table-header">No</span>
+              </th>
+              <td mat-cell *matCellDef="let element">
+                <span class="table-row-text">{{ element.id }}</span>
+              </td>
+            </ng-container>
+
+            <!-- Address Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef>
+                <span class="table-header">Name</span>
+              </th>
+              <td mat-cell *matCellDef="let element">
+                <span class="table-row-text">{{ element.name }}</span>
+              </td>
+            </ng-container>
+
+            <!-- operation Column -->
+            <ng-container matColumnDef="operation">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let element">
+                <img
+                  class="options-menu-trigger"
+                  src="assets/images/icons/menu-dots-vertical.svg"
+                  alt=""
+                  [matMenuTriggerFor]="optionsMenu"
+                />
+                <mat-menu class="table-options-menu" #optionsMenu="matMenu">
+                  <button mat-menu-item>
+                    <img src="assets/images/icons/pencil.svg" alt="" /><span
+                      >Edit</span
+                    >
+                  </button>
+                  <button mat-menu-item>
+                    <img src="assets/images/icons/trash.svg" alt="" /><span
+                      >Delete</span
+                    >
+                  </button>
+                </mat-menu>
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <mat-paginator> </mat-paginator>
+</div>
+}

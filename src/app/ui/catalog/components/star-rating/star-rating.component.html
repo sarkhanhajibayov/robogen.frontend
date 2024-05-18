@@ -1,0 +1,30 @@
+<div class="row">
+  <div id="container">
+    <i
+      [class.rated]="rating >= 1"
+      (click)="setRating(1)"
+      class="fa-solid fa-star"
+    ></i>
+    <i
+      [class.rated]="rating >= 2"
+      (click)="setRating(2)"
+      class="fa-solid fa-star"
+    ></i>
+    <i
+      [class.rated]="rating >= 3"
+      (click)="setRating(3)"
+      class="fa-solid fa-star"
+    ></i>
+    <i
+      [class.rated]="rating >= 4"
+      (click)="setRating(4)"
+      class="fa-solid fa-star"
+    ></i>
+    <i
+      [class.rated]="rating >= 5"
+      (click)="setRating(5)"
+      class="fa-solid fa-star"
+    ></i>
+    <span>3 reviews</span>
+  </div>
+</div>

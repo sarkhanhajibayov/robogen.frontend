@@ -1,0 +1,35 @@
+
+@import "./variables.scss";
+
+%bra-15 {
+  border-radius: 15px;
+}
+%bra-20 {
+  border-radius: 20px;
+}
+%all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%justify-center {
+  display: flex;
+  justify-content: center;
+}
+%align-center {
+  display: flex;
+  align-items: center;
+}
+%main-button {
+  background-color: white;
+  min-width: 75px;
+  color: $pr-color;
+  border: 1px solid $pr-color;
+  transition: all ease 0.3s;
+  font-family: $main-font;
+}
+%main-button-hover {
+  color: #fff;
+  background-color: #000;
+  border: none;
+}

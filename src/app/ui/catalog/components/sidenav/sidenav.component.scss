@@ -1,0 +1,24 @@
+@import "../../../../../styles/extends.scss";
+@import "../../../../../styles/variables.scss";
+
+.accordion-button{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+label{
+    line-height: 20px;
+    margin-left: 12px
+}
+.form-check{
+    @extend %align-center;
+&-input{
+    width: 20px;
+    height: 20px;
+    &:checked{
+        background-color: $pr-color;
+        border-color: $pr-color;
+    }
+}
+}

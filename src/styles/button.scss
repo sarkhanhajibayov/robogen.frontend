@@ -1,0 +1,98 @@
+@import "./variables.scss";
+
+.main-button-short {
+  @extend %all-center;
+  @extend %main-button;
+  border-radius: 6px;
+  min-height: 25px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 150%; /* 15px */
+  img,
+  span {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  img {
+    transition: all ease 0.3s;
+  }
+  &:hover {
+    @extend %main-button-hover;
+  }
+  &:hover img {
+    filter: brightness(0) invert(1);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+.main-button-buy {
+  @extend %all-center;
+  background-color: $pr-color;
+  border-radius: 6px;
+  height: 40px;
+  width: 200px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 150%; /* 15px */
+  transition: all .3s ease;
+  cursor: pointer;
+  img,
+  span {
+    color: #000;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    transition: all .3s ease;
+
+  }
+  &:hover{
+    background-color: #000;
+  }
+  &:hover span{
+    color: #fff;
+  }
+
+}
+.main-button-long[disabled], .main-button-short[disabled]{
+  background-color: lightgray;
+  color: white;
+  border: none;
+  pointer-events: none; 
+}
+.main-button-long {
+  @extend %all-center;
+  @extend %main-button;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 150%;
+  min-height: 45px;
+  &:hover {
+    @extend %main-button-hover;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+}
+.main-button-white{
+  @extend %all-center;
+  min-height: 25px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 150%; /* 15px */
+  background-color: white;
+  min-width: 75px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 6px;
+  transition: all ease 0.3s;
+  font-family: $main-font;
+}

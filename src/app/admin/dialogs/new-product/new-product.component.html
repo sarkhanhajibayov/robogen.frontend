@@ -1,0 +1,154 @@
+
+<div class="bk-form filter-form">
+  <div class="dialog-header">
+    <img
+      mat-dialog-close
+      class="custom-close-btn"
+      src="assets/images/icons/close.svg"
+      alt=""
+    />
+    <h1>New product</h1>
+    <hr />
+  </div>
+  <form [formGroup]="form" (ngSubmit)="save()" action="">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Name:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="name"
+              placeholder="Name"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Description:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="description"
+              placeholder="Description"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Serie:<sup class="text-danger star">*</sup></label>
+            <mat-select formControlName="serieId" placeholder="Select" required>
+              <mat-option>--</mat-option>
+              @for( s of series; track s){
+              <mat-option value="{{ s.id }}">{{ s.name }}</mat-option>
+              }
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Theme:<sup class="text-danger star">*</sup></label>
+            <mat-select formControlName="themeId" placeholder="Select" required>
+              <mat-option>--</mat-option>
+              @for( t of themes; track t){
+              <mat-option value="{{ t.id }}">{{ t.name }}</mat-option>
+              }
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Gender:<sup class="text-danger star">*</sup></label>
+            <mat-select
+              formControlName="genderId"
+              placeholder="Select"
+              required
+            >
+              <mat-option>--</mat-option>
+              @for( g of genders; track g){
+              <mat-option value="{{ g.id }}">{{ g.name }}</mat-option>
+              }
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Age group:<sup class="text-danger star">*</sup></label>
+            <mat-select
+              formControlName="ageGroupId"
+              placeholder="Select"
+              required
+            >
+              <mat-option>--</mat-option>
+              @for( a of ageGroups; track a){
+              <mat-option value="{{ a.id }}">{{ a.name }}</mat-option>
+              }
+            </mat-select>
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Box height:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="boxHeight"
+              placeholder="Box height"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Box width:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="boxWidth"
+              placeholder="Box width"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Box diameter:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="boxDiameter"
+              placeholder="Box diameter"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="col-12 p-0">
+          <div class="form-group">
+            <label>Price:<sup class="text-danger star">*</sup></label>
+            <input
+              matInput
+              formControlName="price"
+              placeholder="Price"
+              type="number"
+            />
+          </div>
+          <div class="col-12 p-0">
+            <div class="form-group">
+              <label>Image name:<sup class="text-danger star">*</sup></label>
+              <input
+                matInput
+                formControlName="imageName"
+                placeholder="Image name"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="options d-flex justify-content-end">
+          <button [disabled]="form.invalid" class="main-button-short">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

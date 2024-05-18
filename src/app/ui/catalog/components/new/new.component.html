@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row p-0">
+      @for (card of cards; track card){
+      <div class="col-md-4 card">
+        <a class="card__wrapper" href="">
+          <img class="card__wrapper__img img-fluid" src="{{ card.src }}" alt="" />
+          <img
+            class="card__wrapper__img card__wrapper__img__hover img-fluid"
+            src="{{ card.src_hover }}"
+            alt=""
+          />
+        </a>
+        <div class="card__content">
+          <div class="card__content__info text-center">
+            <span class="card__content__info__title">{{ card.title }}</span>
+            <p class="card__content__info__text mt-4">{{ card.text }}</p>
+          </div>
+          <div class="card__content__purchase text-center">
+            <div class="card__content__purchase__sum">{{ card.sum }}</div>
+            <button class="btn card__content__purchase__btn">Buy</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  

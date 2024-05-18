@@ -1,0 +1,45 @@
+<div class="container-fluid login p-4">
+  <div class="row w-100 justify-content-center login__bg">
+    <div class="col-10 col-sm-8 col-md-6 col-lg-4 text-center pt-4">
+      <a routerLink="" class="login__text"
+        ><img
+          src="assets/images/icons/logo.png"
+          alt="Logo"
+          width="70"
+          height="70"
+          class="d-inline-block align-text-top my-2"
+        />
+        <p>robogen</p></a
+      >
+    </div>
+  </div>
+  <div class="row w-100 justify-content-center">
+    <div class="col-10 col-sm-8 col-md-6 col-lg-3 login__form">
+      <form class="w-100" [formGroup]="loginForm">
+        <h4 class="text-center">Login</h4>
+        <div class="form-group">
+          <label for="">Email</label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="Email"
+            type="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Password</label>
+          <input
+            matInput
+            formControlName="password"
+            placeholder="**********"
+            type="password"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <a href="">Forgot password?</a>
+        </div>
+        <button routerLink="/admin" class="main-button-long">SIGN IN</button>
+      </form>
+    </div>
+  </div>
+</div>

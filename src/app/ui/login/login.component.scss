@@ -1,0 +1,43 @@
+@import "../../../styles/extends.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/form.scss";
+
+.login{
+    height: 90vh;
+    &__bg{
+        position: relative;
+        height: 45vh;
+        background-image: url("/assets/images/site/bg-1.jpg");
+        background-position: center 80%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @extend %bra-15;
+        a{
+            text-decoration: none;
+            display: block;
+        }
+
+    }
+    &__text{
+        font-family: $logo-font;
+        font-size: 16px;
+        color: #fff;
+    }
+    &__form{
+        box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+        @extend %bra-15;
+        @extend %all-center;
+        padding: 30px;
+        background-color: #fff;
+        position: absolute;
+        top: 35%;
+        h4{
+            color: #2D3748;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}

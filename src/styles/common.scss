@@ -1,0 +1,124 @@
+@import "./variables.scss";
+@import "./extends.scss";
+.cus-card {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  margin: 15px 0;
+  background-color: white;
+  padding: 30px;
+}
+.card-bg{
+    min-height: 200px;
+    @extend %bra-15;
+    padding: 50px 20px;
+    margin: 20px;
+    background-color:$pr-color;
+    border: none;
+    .content {
+        @extend %bra-15;
+        min-height: 200px;
+        background-color: white;
+        padding: 35px 25px;
+      }
+}
+.table-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    color: $dark-gray;
+    font-family: $main-font;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+  }
+}
+.options {
+  @extend %all-center;
+  button:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+.table-content {
+  .options-menu-trigger {
+    width: 15px;
+    cursor: pointer;
+  }
+  .table-header {
+    color: $gray;
+    font-family: $main-font;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 140%;
+  }
+  .table-row-text {
+    color: $gray-v2;
+    font-family: $main-font;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 140%;
+    display: inline-block;
+    padding: 20px 0;
+  }
+  .table-row-document {
+    color: $gray-v2;
+    font-family: $main-font;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 140%;
+    display: inline-block;
+    padding: 20px 0;
+  }
+}
+.table-options-menu {
+  min-width: auto !important;
+  .mat-mdc-menu-content {
+    padding: 0;
+  }
+  button {
+    min-height: 20px !important;
+
+    span {
+      display: inline-block;
+      padding: 5px 10px 5px 0;
+      color: $dark-gray;
+      text-align: center;
+      font-family: $main-font;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 150%;
+    }
+
+    img {
+      max-height: 100%;
+      width: 13px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .mat-mdc-menu-item-text {
+      color: rgb(0, 0, 0);
+      font-family: $main-font;
+      font-size: 12px !important;
+      font-style: normal;
+      line-height: 150%;
+    }
+  }
+  button:not(:last-child) {
+    border-bottom: 1px solid $light-gray;
+  }
+}
+mat-spinner.spinner {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  z-index: 100;
+}
+
+.mat-mdc-progress-spinner circle {
+  stroke: $pr-color;
+}

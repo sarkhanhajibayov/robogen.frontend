@@ -1,0 +1,177 @@
+@import "./extends.scss";
+.bk-form{
+  label{
+      display: block;
+      color: $dark-gray;
+      //font-family: $main-font;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      margin-bottom: .3em;
+  }
+  .form-group{
+      position: relative;
+      margin-bottom: 20px;
+  }
+  mat-select,input,.custom-file{
+      color: $dark-gray!important;
+      font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+      padding: 0px 20px;
+      @extend %bra-15;
+      border: 1px solid $light-gray;
+      background: white;
+      width: 100%;
+      @extend %align-center;
+      height: 50px;
+      flex-shrink: 0;
+  }
+  .custom-file{
+      height: 40px;
+  }
+  .custom-file-text{
+      color:$dark-gray;
+      padding: 4px 30px;
+      background-color: $background;
+      border-radius: 5px;
+
+  }
+  .custom-file-name-text{
+      color:$blue;
+      display: inline-block;
+      margin-left: 7px;
+  
+  }
+  input:-webkit-autofill {
+      -webkit-text-fill-color: $gray!important;
+      -webkit-background-clip: text;
+  }
+  input:-webkit-autofill:focus {
+      -webkit-text-fill-color: $gray!important;
+      -webkit-background-clip: text;
+  }
+
+
+
+
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 140%;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 140%;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 140%;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 140%;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 140%;
+  }
+
+  ::placeholder { /* Most modern browsers support this now. */
+          color: $gray!important;
+          //font-family: $main-font;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 140%;
+  }
+
+
+  .mat-mdc-select-placeholder,.mat-mdc-select-arrow{
+      color: $gray;
+      //font-family: $main-font;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 140%;
+  }
+  .phone-control{
+      display: flex;
+      mat-select{
+          padding: 0px 10px;
+          width:30%;
+          margin-right: 5%
+      }
+      input{
+          width:65% ;
+      }
+  }
+}
+.filter-form{
+  label{
+      margin-bottom: 1em;
+  }
+  mat-select,input{
+      height: 40px;
+  }
+}
+// textarea:focus,
+// input[type="text"]:focus,
+// input[type="password"]:focus,
+// input[type="datetime"]:focus,
+// input[type="datetime-local"]:focus,
+// input[type="date"]:focus,
+// input[type="month"]:focus,
+// input[type="time"]:focus,
+// input[type="week"]:focus,
+// input[type="number"]:focus,
+// input[type="email"]:focus,
+// input[type="url"]:focus,
+// input[type="search"]:focus,
+// input[type="tel"]:focus,
+// input[type="color"]:focus,
+// .uneditable-input:focus {
+//   border: none;
+//   box-shadow: none;
+//   outline: 0 none;
+// }
+.login__form label {
+  display: block;
+  color: #2D3748;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 0.3em;}
+
+mat-select,input,.custom-file{
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 140%;
+  padding: 0px 20px;
+  @extend %bra-15;
+  background: white;
+  width: 100%;
+  @extend %align-center;
+  height: 50px;
+  flex-shrink: 0;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 20px;
+}
+.form-check-input{
+margin-bottom: 0px !important;
+}

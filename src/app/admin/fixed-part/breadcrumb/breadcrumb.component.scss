@@ -1,0 +1,74 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/extends.scss';
+.navbar-container{
+
+   .breadcrumb-container{
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1400px;
+    .breadcrumbs{
+        @extend %all-center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            cursor: default;
+            color: white;
+            font-family: $main-font;
+            font-size: 12px;
+            font-style: normal;
+            line-height: 150%;
+            padding: 0 10px 0 0;
+            a{
+                color: white;
+                text-decoration: none
+
+            }
+            ::ng-deep .custom-bread-crumb{
+                padding: 0 10px 0 0;
+                background-color: transparent!important;
+                li{
+                    padding: 0 10px 0 0;
+                    .line{
+                        padding: 0 0 0 10px;
+                    }
+                    a{
+                        color: white!important;
+                        text-decoration: none
+                    }
+                }
+            }
+        }
+
+    }
+   }
+   .navbar{
+    @extend %all-center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        color: white;
+            font-family: $main-font;
+            font-size: 12px;
+            font-style: normal;
+            line-height: 150%;
+            //padding: 0 10px 0 0;
+            div{
+                cursor: pointer;
+                @extend %all-center;
+            }
+    }
+    li:not(:last-child){
+        margin-right: 10px;
+    }
+    img{
+        display: inline-block;
+        margin: 3px;
+    }
+   }
+}
